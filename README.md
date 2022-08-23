@@ -22,7 +22,7 @@ Users: Administrator/Project manager [evaluator], Team Leader (internal/external
 - report expeced delays, justify them and provide new
   estimated completion dates
 
-### Customer
+### Customers
 - View Projects,
 - View the structure of the projects/ related info
 - track the progress
