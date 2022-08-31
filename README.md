@@ -33,5 +33,7 @@ The system has varied kinds of users with varied roles. They include the Admin, 
 ## What is P-MaG solving?
 P-MaG is solving the idea that teams which include developers and operational professionals can swiftly collaborate on a project and be able to track their own progress till completion in a timed estimated period.
 The tech used enables collaborations even on mobile
-## Framework Used
-Firebase
+## Technologies Used
+- Firebase
+- Figma 
+- Parcel
