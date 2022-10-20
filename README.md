@@ -1,6 +1,6 @@
-# P-MaG
+# P-MerG
 ## Introduction
-P-MaG is a project manager web app. It helps to collaborate and work together on a project 
+P-MerG is a project manager web app. It helps to collaborate and work together on a project 
 through the directions and categorizations by the project admin. 
 
 ## Users
@@ -37,3 +37,6 @@ The tech used enables collaborations even on mobile
 - Firebase
 - Figma 
 - Parcel
+- Vanilla JS
+- HTML5/CSS3
+- 
