@@ -1,4 +1,6 @@
 # P-MerG
+![image](https://user-images.githubusercontent.com/84603202/197187517-aa7b4fba-8e80-437e-8504-8c8f325d756e.png)
+
 ## Introduction
 P-MerG is a project manager web app. It helps to collaborate and work together on a project 
 through the directions and categorizations by the project admin. 
