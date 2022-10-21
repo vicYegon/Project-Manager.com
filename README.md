@@ -30,8 +30,8 @@ The system has varied kinds of users with varied roles. They include the Admin, 
 ## Requirements
 - Users must have internet
 
-## What is P-MaG solving?
-P-MaG is solving the idea that teams which include developers and operational professionals can swiftly collaborate on a project and be able to track their own progress till completion in a timed estimated period.
+## What is P-MerG solving?
+P-MerG is solving the idea that teams which include developers and operational professionals can swiftly collaborate on a project and be able to track their own progress till completion in a timed estimated period.
 The tech used enables collaborations even on mobile
 ## Technologies Used
 - Firebase
