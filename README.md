@@ -3,7 +3,7 @@
 
 ## Introduction
 P-MerG is a project manager web app. It helps to collaborate and work together on a project 
-through the directions and categorizations by the project admin. 
+through instructions and categorizations by the project admin. 
 
 ## Users
 The system has varied kinds of users with varied roles. They include the Admin, Team leader and the Customer:-
