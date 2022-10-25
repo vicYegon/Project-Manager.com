@@ -21,6 +21,8 @@ The system has varied kinds of users with varied roles. They include the Admin, 
 - Record completed tasks
 - Report expected delays, justify them and provide new estimated completion dates
 
+![Screenshot from 2022-10-25 18-35-51](https://user-images.githubusercontent.com/84603202/197818352-2141f0b4-b8ed-4b65-bdff-046d61667c6e.png)
+
 ### 3. Customers e.g Students, Developers
 - View Projects
 - View the structure of the projects
