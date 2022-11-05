@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/2d8fe98e97.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./reports.css">
+    <title>reports</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <a href="./index.html"><h2>P-<span>MerG</span></h2></a>
+        <h2>Reports</h2>
+        <table class="table table-dark">            
+            <thead>
+                <tr>
+                    <th>SNo</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="addreportrow"> </tbody>            
+        </table>
+            <!-- <input type="number" placeholder="ReportID" id="SNo">
+                <input type="string" placeholder="title" id="title">
+                <input type="string" placeholder="description" id="description">
+                <input type="string" placeholder="time" id="time"> -->
+                <!-- <th><input type="string" placeholder="" id="Actions"></th>
+                <input type="button" value="Add report" id="addreport"> -->
+        
+        <button class="btn btn-outline-dark"><a style="text-decoration: none; color: white; font-weight: bold;" href="./admin page.html">Back</a></button>
+        <button class="btn btn-outline-info" id="addreport" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold;">Delete report</button>
+        <button class="btn btn-outline-info" id="editreport" >Edit report</button>
+        <!-- <button class="btn btn-outline-info" id="addreport" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold;">Delete report</button> -->
+    </div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+        // import { getAuth, signInWithEmailAndPassword, getRedirectResult, GoogleAuthProvider, signInWithRedirect, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+        import { getFirestore, collection, getDocs, addDoc, doc, deleteDoc, updateDoc, onSnapshot, getDoc } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js";
+
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyCq18SQTbZg59xu8TK5RQaiW9VFzafD5b4",
+          authDomain: "p-merg2-74700.firebaseapp.com",
+          projectId: "p-merg2-74700",
+          storageBucket: "p-merg2-74700.appspot.com",
+          messagingSenderId: "897038781923",
+          appId: "1:897038781923:web:f689f8b11feedd9b9464d6"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        // const auth = getAuth(app);
+        const db = getFirestore(app);
+// ---------------------------------Add data to database--------------------------------------------//
+        
+        const add_report =document.getElementById('addreport');
+
+            add_report.addEventListener('click', async(e)=>{
+
+                var title = document.getElementById('title').value;
+                var description = document.getElementById('description').value;
+                // var date = document.getElementById('time').value;
+
+
+                try {
+                    // var rpdate = new Date();
+                    const docRef = await addDoc(collection(db, "Reports"), {
+                        Title: title,
+                        Description: description,
+                        // Time: time
+                    });
+
+                    console.log("Document written with ID: ", docRef.id);
+                    alert("entry added");
+                    } catch (e) {
+                    console.error("Error adding document: ", e);
+                    }  
+            });
+            if (doc.id){
+                window.location.reload()
+        }
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------
+// loading data to table in firebase
+
+        var report_id = 0;
+        var tbody = document.getElementById('addreportrow');
+        
+        function loadDataToTable(title, description){
+            let trow = document.createElement("trow");
+            let td1 = document.createElement('td');
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            // let td4 = document.createElement('td');
+
+            td1.innerHTML= ++report_id;
+            td2.innerHTML= title;
+            td3.innerHTML= description;
+            // td4.innerHTML= date;
+            // td1.innerHTML= ++report_id;
+
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td3);
+            // trow.appendChild(td4);
+            // trow.appendChild(td5);
+
+            tbody.appendChild(trow);
+        }
+
+        function AddAllItemsToTable(TheReports){
+            report_id = 0;
+            tbody.innerHTML="";
+            TheReports.forEach(element =>{
+                loadDataToTable(element.Title, element.Description);
+            });
+        }
+
+
+// ------------------------------------get all data from database------------------------------------------------------------------
+
+        async function GetAllDataOnce(){
+            const querySnapshot = await getDocs(collection(db, "Reports"));
+
+            var reports = [];
+            querySnapshot.forEach(doc =>{
+                reports.push(doc.data());
+            });
+
+            AddAllItemsToTable(reports);
+        }
+
+        window.onload = GetAllDataOnce();
+
+
+
+
+
+
+
+
+
+
+
+        // window.addEventListener("load", async(e)=>{
+        //     var tasksDiv = document.getElementById("addreportrow")
+        //     var addreportrow = ``
+        //     const querySnapshot = await getDocs(collection(db, "Report"));
+        //     querySnapshot.forEach((doc) => {
+        //         const data = doc.data()
+        //         // console.log(doc.id, " => ", doc.data());
+
+        //         addtaskrow += `
+        //         <tr id="${doc.id}">
+        //         <td>${doc.id}</td>
+        //         <td id="task-task_name-${doc.id}" >${data.Title}</td>
+        //         <td id="task-description-${doc.id}" >${data.Description}</td>
+        //         <td id="task-status-${doc.id}" >${data.Date}</td>
+        //         <td id="task-assignedto-${doc.id}" >${data.Action}</td>
+        //         <td>
+        //         <span> 
+                
+        //         <input type="button" value="edit" class="edit" id="edit-task-${doc.id}" onclick="window.editTask('${doc.id}')">
+        //         <input type="button" value="Save" class="save" id="save-task-${doc.id}" onclick="window.saveTask('${doc.id}')">
+
+        //         <input type="button" value="delete" class="delete" id="delete-task-${doc.id}" onclick="window.deleteTask('${doc.id}','${data.task_name}')">
+        //         </span>
+                
+        //         </td>
+        //         </tr>
+        //         `
+
+        //     });
+        //     tasksDiv.innerHTML = tasks
+        //     })
+    </script>
+</body>
+</html>

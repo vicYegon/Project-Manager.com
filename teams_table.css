@@ -1,0 +1,52 @@
+body{
+    /* margin: 0;
+    padding: 0; */
+    background: linear-gradient(#5c78b4, #76a7bb);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: auto;
+}
+.logo{
+    text-decoration: none;
+    color: rgb(62, 62, 100);
+    margin: 20px 20px;
+    border: 2px solid rgb(58, 196, 58);
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.logo:hover{
+    color: black;
+}
+.logo span{
+    color: saddlebrown;
+}
+
+.logo span:hover{
+    color: white;
+}
+.container{
+    margin-top: 40px;
+}
+.teams_table{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.td_names{
+    font-weight: bold;
+}
+a .btn{
+    font-weight: bold;
+}
+
+#edit{
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(140, 140, 140);
+}
+#edit:hover{
+    color: brown;
+    background: rgb(255, 255, 255);
+}

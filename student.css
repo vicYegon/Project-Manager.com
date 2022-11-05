@@ -1,0 +1,151 @@
+*{
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #384297;
+  --color-error: #ff0000;
+  --color-success: #4bb544;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+.student-container{
+  width: auto;
+  height: 100vh;
+  border: 2px solid black;
+  background: linear-gradient(#2b5687, #8eb2e7);
+  color: rgb(113, 38, 38);
+  overflow-x: hidden;
+}
+header{
+  top:0;
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  /* border: 2px solid black; */
+}
+
+.logo{
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border: 2px solid brown;
+  border-radius: 50px;
+  margin: 30px 50px;
+}
+.logo:hover{
+  background: linear-gradient(#123d6e, #6d9feb);
+  color: rgb(0, 0, 0);
+}
+
+.logo span{
+  color: rgb(101, 31, 31);
+}
+
+.body_section{
+  display: flex;
+  border: 2px solid;
+  margin: 20px;
+  width: auto;
+  height: 100%;
+  color: #000;
+  font-weight: bold;
+}
+
+.navbar{
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  line-height: 60px;
+}
+.navbar .navbar_link{
+  text-decoration: none;
+  background: rgb(117, 68, 68);
+  color: white;
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;  
+  transition: 0.4s ease-in-out;
+}
+
+.navbar .navbar_link:hover{
+  background: grey;
+  color: black;
+}
+
+.student-main{
+  border: 2px solid white;
+  margin: 10px;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.resume_box{
+  border: 2px solid;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+  /* line-height: 30px; */
+}
+
+.resume_box a{
+  color: white;
+  text-decoration: none;
+}
+.resume_box a:hover{
+  color: rgb(123, 44, 44);
+}
+
+.recents_box{
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 30px;
+}
+
+.recents_box .recents_button{
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.4s ease-in;
+}
+
+.recents_box .recents_button:hover{
+  color: white;
+  background: rgb(169, 96, 96);
+  /* border-radius: 10px; */
+}
+
+.recents_box .recents_button{
+  margin-bottom: 10px;
+}
+
+.recents_box .box1{
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 150px;
+}
+
+.recents_box .box2{
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.recents_box .box3{
+  border: 2px solid black;
+  margin-bottom: 10px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+}
