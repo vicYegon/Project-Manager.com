@@ -1,0 +1,229 @@
+*{
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #384297;
+  --color-error: #ff0000;
+  --color-success: #4bb544;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+.teams-container{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  background: linear-gradient(#5c78b4, #76a7bb);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+header{
+  position: relative;
+  width: 100%;
+  background: linear-gradient(rgb(158, 204, 223),#5d8ece, rgb(155, 202, 221));
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+header h2 .logo{
+  position: relative;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  margin: 30px;
+  margin-right: 400px;
+  text-decoration: none;
+  border: 2px solid #4778b8;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+header h2 .logo:hover{
+  color: #384297;
+  padding: 5px;
+}
+
+header .navbar{
+  padding: 30px;
+  margin-left: 80px;
+}
+
+header .navbar .navbar_link{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 0 50px;
+}
+
+header .navbar .navbar_link:hover{
+  color: #fff;
+  font-size: 25px;
+}
+
+
+ul{
+  margin: 20px auto;
+  list-style-type: none;
+}
+ul li {
+  margin: 15px;
+  display: inline-flex;
+  /* flex-direction: right; */
+
+}
+ul li .drop_down-link{
+  color:#000;
+  border: 2px solid var(--color-success);
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 20px;
+  background: rgb(127, 161, 159);
+  font-weight: bold;
+}
+ul li .drop_down-link:hover{
+  color: rgb(0, 0, 0);
+  background: linear-gradient(rgb(206, 187, 151), rgb(32, 147, 255));
+  font-size: 20px;
+}
+
+.boxes{
+  border: none;
+  margin: 0 200px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  /* margin-left: 400px; */
+}
+
+.teams_boxes{
+  border: none;
+  margin: 15px;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.current_pro{
+  background: url(./firebase.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+  padding: 10px;
+  color: #000;
+  height: 150px;
+  border-radius: 20px;
+  height: 200px;
+}
+.current_pro p{
+  font-weight: bold;
+  margin: 20px 0 0 0px;
+}
+.current_pro p a{
+  color: black;
+  text-decoration: none;
+  background: white;
+  border-radius: 20px;
+  padding: 5px;
+}
+.current_pro p a:hover{
+  border: 3px solid black;
+  color: black;
+}
+
+.pro_report{
+  border: none;
+  color: black;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+  height: 200px;
+  height: 200px;
+  background: linear-gradient(rgb(243, 217, 170), rgb(32, 147, 255));
+}
+.pro_report textarea{
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  height: 80px;
+  color: black;
+  background: linear-gradient(rgb(235, 241, 234), rgb(151, 247, 239));
+}
+.pro_report button{
+  font-size: 15px;
+  padding: 5px;
+  font-weight: bolder;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.pro_report button:hover{
+  font-size: 16px;
+  color: white;
+  border: 2px solid black;
+  background: rgb(65, 64, 64);
+}
+.comment_reviews{
+  margin: 5px;
+  color: #000;
+  border: none;
+  background: linear-gradient(rgb(235, 212, 170), rgb(32, 147, 255));
+  border-radius: 20px;
+  height: 150px;
+  padding:10px;
+}
+.boxes_on_the_right{
+  border: none;
+  flex-grow: 1;
+  width: 300px;
+  float: right;
+}
+
+.team_list{
+  background: linear-gradient(rgb(247, 233, 209), rgb(32, 147, 255));
+  height: 200px;
+  border-radius: 20px;
+  padding: 10px;
+  color: black;
+  overflow-y: scroll;
+}
+
+.team_list table{
+  width: 100%;
+}
+.cntbtn{
+  margin-top: 20px;
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+h4 .cnt_ins{
+  background:linear-gradient(rgb(236, 215, 176), rgb(32, 147, 255));
+  margin: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+}
+h4 .cnt_ins:hover{
+  font-size: 15px;
+  text-decoration: underline;
+}
+.chat_box{
+  background: linear-gradient(rgb(233, 213, 176), rgb(32, 147, 255));
+  margin: 30px auto;
+  color: black;  
+  border-radius: 20px;
+  height: 50px;
+  padding: 15px;
+  text-align: center;
+}
+.chat_box:hover{
+  color: rgb(226, 116, 26);
+  font-size: 15px;
+  border: 3px solid black;
+}

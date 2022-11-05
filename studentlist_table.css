@@ -1,0 +1,17 @@
+body{
+    background: linear-gradient(rgb(102, 102, 102), #8eb4df, rgb(176, 208, 153), rgb(178, 193, 161),rgb(138, 89, 73),rgb(216, 60, 97));
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    margin-top: 40px;
+}
+.head{
+display: flex;
+margin: 20px;
+justify-content: space-around;
+}
+
+.table{
+    border-radius: 20px;
+}

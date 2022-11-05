@@ -1,0 +1,130 @@
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #384297;
+    --color-error: #ff0000;
+    --color-success: #4bb544;
+    --border-radius:20px;
+
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(./web1.jpg);
+    background-size: cover;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+}
+header{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(rgb(158, 204, 223),#5d8ece, rgb(155, 202, 221));
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+header h2 .logo{
+    position: relative;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 30px;
+    margin-right: 300px;
+    text-decoration: none;
+    border: 2px solid #4778b8;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.logo span{
+    color: rgb(146, 70, 70);
+}
+
+header h2 .logo:hover{
+    color: #000000;
+    /* padding: 5px; */
+}
+
+header .navbar{
+    padding: 30px;
+    margin-left: 80px;
+}
+
+header .navbar .navbar_link{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 50px;
+}
+
+header .navbar .navbar_link:hover{
+    color: rgb(147, 67, 67);
+    /* font-size: 25px; */
+}
+
+form{
+    background: linear-gradient(#85cef0, rgb(77, 77, 189));
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.form_title{
+    text-align: center;
+}
+
+.form_input-group .form_input{
+    background: transparent;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 20px;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+form .form__button{
+    width: 100%;
+    padding: 5px;
+    background: transparent;
+    margin: 5px auto;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form .form__button:hover{
+    color: white;
+    background: #3151e0;
+    font-size: 20px;
+}
+
+form .form__text{
+    font-weight: bold;
+}
+
+form .form__text .form__link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+form .form__text .forgot_password{
+    text-decoration: none;
+    color: white;
+    margin: 30%;
+}
+form .form__text .forgot_password:hover{
+    color: black;
+    text-decoration: underline;
+}
+form .form__text .form__link:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
